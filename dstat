@@ -1314,8 +1314,8 @@ class dstat_lock(dstat):
 class dstat_mem(dstat):
     def __init__(self):
         self.name = 'memory usage'
-        self.nick = ('used', 'free', 'buff', 'cach')
-        self.vars = ('MemUsed', 'MemFree', 'Buffers', 'Cached')
+        self.nick = ('used', 'anon', 'buff', 'cach','dirty','free')
+        self.vars = ('MemUsed', 'AnonPages', 'Buffers', 'Cached','Dirty','MemFree')
         self.open('/proc/meminfo')
 
     def extract(self):
